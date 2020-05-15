@@ -1,6 +1,6 @@
-# chat_ss
+# chatss
 
-A new Flutter project.
+Una aplicacion de tipo chat hecha en flutter
 
 ## Getting Started
 

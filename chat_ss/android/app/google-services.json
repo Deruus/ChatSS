@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "211222543891",
+    "firebase_url": "https://chatss-667d8.firebaseio.com",
+    "project_id": "chatss-667d8",
+    "storage_bucket": "chatss-667d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211222543891:android:3f81cd652e094fe54449e6",
+        "android_client_info": {
+          "package_name": "com.teocom.chatss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211222543891-18tb8jqdn3kcv6dslbqpgab78ijaqoja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBmc9UmEtdxvBH28Qvr7fVyZ6dBJqefG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211222543891-18tb8jqdn3kcv6dslbqpgab78ijaqoja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

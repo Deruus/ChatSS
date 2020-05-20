@@ -1,24 +1,54 @@
-import 'package:chatss/vistas/iniciar.dart';
+import 'package:chatss/helper/authenticate.dart';
+import 'package:chatss/helper/helperfunctions.dart';
+import 'package:chatss/views/chatrooms.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  bool userIsLoggedIn;
+
+  @override
+  void initState() {
+    getLoggedInState();
+    super.initState();
+  }
+
+  getLoggedInState() async {
+    await HelperFunctions.getUserLoggedInSharedPreference().then((value){
+      setState(() {
+        userIsLoggedIn  = value;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'FlutterChat',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
-        primarySwatch: Colors.blue,
-
+        primaryColor: Color(0xff145C9E),
+        scaffoldBackgroundColor: Color(0xff1F1F1F),
+        accentColor: Color(0xff007EF4),
+        fontFamily: "OverpassRegular",
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Iniciar(),
+      home: userIsLoggedIn != null ?  userIsLoggedIn ? ChatRoom() : Authenticate()
+          : Container(
+        child: Center(
+          child: Authenticate(),
+        ),
+      ),
     );
   }
 }

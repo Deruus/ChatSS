@@ -1,6 +1,6 @@
 # chatss
 
-Una aplicacion de tipo chat hecha en flutter
+Una app de mensajeria instantanea con encriptacion AOS desarrollad con flutter y firebase
 
 ## Getting Started
 

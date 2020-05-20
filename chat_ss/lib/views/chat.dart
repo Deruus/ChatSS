@@ -86,7 +86,7 @@ class _ChatState extends State<Chat> {
                           controller: messageEditingController,
                           style: simpleTextStyle(),
                           decoration: InputDecoration(
-                              hintText: "Message ...",
+                              hintText: "Mensaje ...",
                               hintStyle: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -105,8 +105,8 @@ class _ChatState extends State<Chat> {
                           decoration: BoxDecoration(
                               gradient: LinearGradient(
                                   colors: [
-                                    const Color(0x36FFFFFF),
-                                    const Color(0x0FFFFFFF)
+                                    const Color.fromRGBO(210, 10, 55, 1.0),
+                                    const Color.fromRGBO(255, 0, 0, 1.0),
                                   ],
                                   begin: FractionalOffset.topLeft,
                                   end: FractionalOffset.bottomRight

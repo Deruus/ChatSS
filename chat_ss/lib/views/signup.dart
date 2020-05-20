@@ -74,26 +74,26 @@ class _SignUpState extends State<SignUp> {
                     style: simpleTextStyle(),
                     controller: usernameEditingController,
                     validator: (val){
-                      return val.isEmpty || val.length < 3 ? "Enter Username 3+ characters" : null;
+                      return val.isEmpty || val.length < 3 ? "Tu nombre de usuario debe tener minimo 3 caracteres" : null;
                     },
-                    decoration: textFieldInputDecoration("username"),
+                    decoration: textFieldInputDecoration("Usuario"),
                   ),
                   TextFormField(
                     controller: emailEditingController,
                     style: simpleTextStyle(),
                     validator: (val){
                       return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(val) ?
-                      null : "Enter correct email";
+                      null : "Proporciona un correo electrónico valido";
                     },
-                    decoration: textFieldInputDecoration("email"),
+                    decoration: textFieldInputDecoration("Correo Electrónico"),
                   ),
                   TextFormField(
                     obscureText: true,
                     style: simpleTextStyle(),
-                    decoration: textFieldInputDecoration("password"),
+                    decoration: textFieldInputDecoration("Contraseña"),
                     controller: passwordEditingController,
                     validator:  (val){
-                      return val.length < 6 ? "Enter Password 6+ characters" : null;
+                      return val.length < 6 ? "Tu contraseña debe tener almenos 6 caracteres" : null;
                     },
 
                   ),
@@ -112,11 +112,14 @@ class _SignUpState extends State<SignUp> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     gradient: LinearGradient(
-                      colors: [const Color(0xff007EF4), const Color(0xff2A75BC)],
+                      colors: [
+                        const Color.fromRGBO(210, 10, 55, 1.0),
+                        const Color.fromRGBO(255, 0, 0, 1.0),
+                      ],
                     )),
                 width: MediaQuery.of(context).size.width,
                 child: Text(
-                  "Sign Up",
+                  "Registrarse",
                   style: biggerTextStyle(),
                   textAlign: TextAlign.center,
                 ),
@@ -131,7 +134,7 @@ class _SignUpState extends State<SignUp> {
                   borderRadius: BorderRadius.circular(30), color: Colors.white),
               width: MediaQuery.of(context).size.width,
               child: Text(
-                "Sign Up with Google",
+                "Registrarse con Google",
                 style: TextStyle(fontSize: 17, color: CustomTheme.textColor),
                 textAlign: TextAlign.center,
               ),
@@ -143,7 +146,7 @@ class _SignUpState extends State<SignUp> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Already have an account? ",
+                  "Ya tengo una cuenta! ",
                   style: simpleTextStyle(),
                 ),
                 GestureDetector(
@@ -151,7 +154,7 @@ class _SignUpState extends State<SignUp> {
                     widget.toggleView();
                   },
                   child: Text(
-                    "SignIn now",
+                    "Iniciar",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,

@@ -82,22 +82,22 @@ class _SignInState extends State<SignIn> {
                           r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                           .hasMatch(val)
                           ? null
-                          : "Please Enter Correct Email";
+                          : "Por favor proporciona un correo electrónico valido";
                     },
                     controller: emailEditingController,
                     style: simpleTextStyle(),
-                    decoration: textFieldInputDecoration("email"),
+                    decoration: textFieldInputDecoration("Correo electrónico"),
                   ),
                   TextFormField(
                     obscureText: true,
                     validator: (val) {
                       return val.length > 6
                           ? null
-                          : "Enter Password 6+ characters";
+                          : "Tu contraseña debe tener minimo 6 caracteres";
                     },
                     style: simpleTextStyle(),
                     controller: passwordEditingController,
-                    decoration: textFieldInputDecoration("password"),
+                    decoration: textFieldInputDecoration("Contraseña"),
                   ),
                 ],
               ),
@@ -119,7 +119,7 @@ class _SignInState extends State<SignIn> {
                       padding: EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
                       child: Text(
-                        "Forgot Password?",
+                        "Olvide mi contraseña!",
                         style: simpleTextStyle(),
                       )),
                 )
@@ -138,13 +138,13 @@ class _SignInState extends State<SignIn> {
                     borderRadius: BorderRadius.circular(30),
                     gradient: LinearGradient(
                       colors: [
-                        const Color(0xff007EF4),
-                        const Color(0xff2A75BC)
+                        const Color.fromRGBO(210, 10, 55, 1.0),
+                        const Color.fromRGBO(255, 0, 0, 1.0),
                       ],
                     )),
                 width: MediaQuery.of(context).size.width,
                 child: Text(
-                  "Sign In",
+                  "Iniciar",
                   style: biggerTextStyle(),
                   textAlign: TextAlign.center,
                 ),
@@ -160,7 +160,7 @@ class _SignInState extends State<SignIn> {
                   color: Colors.white),
               width: MediaQuery.of(context).size.width,
               child: Text(
-                "Sign In with Google",
+                "Iniciar con Google",
                 style:
                 TextStyle(fontSize: 17, color: CustomTheme.textColor),
                 textAlign: TextAlign.center,
@@ -173,7 +173,7 @@ class _SignInState extends State<SignIn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don't have account? ",
+                  "No tengo una   ",
                   style: simpleTextStyle(),
                 ),
                 GestureDetector(
@@ -181,7 +181,7 @@ class _SignInState extends State<SignIn> {
                     widget.toggleView();
                   },
                   child: Text(
-                    "Register now",
+                    "cuenta",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,

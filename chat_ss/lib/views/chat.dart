@@ -163,8 +163,8 @@ class MessageTile extends StatelessWidget {
                 bottomRight: Radius.circular(23)),
             gradient: LinearGradient(
               colors: sendByMe ? [
-                const Color(0xff007EF4),
-                const Color(0xff2A75BC)
+                const Color.fromRGBO(210, 10, 55, 1.0),
+                const Color.fromRGBO(255, 0, 0, 1.0),
               ]
                   : [
                 const Color(0x1AFFFFFF),

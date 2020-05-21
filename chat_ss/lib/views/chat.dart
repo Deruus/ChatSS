@@ -26,7 +26,7 @@ class _ChatState extends State<Chat> {
             ? ListView.builder(
                 padding: EdgeInsets.all(10.0),
                 itemCount: snapshot.data.documents.length,
-                reverse: true,
+//                reverse: true,
                 itemBuilder: (context, index) {
                   return MessageTile(
                     message: snapshot.data.documents[index].data["message"],

@@ -39,8 +39,8 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primaryColor: Color.fromRGBO(210, 10, 55, 1.0),
         scaffoldBackgroundColor: Color(0xff1F1F1F),
-        accentColor: Color(0xff007EF4),
-        fontFamily: "OverpassRegular",
+        accentColor: Color.fromRGBO(210, 10, 55, 1.0),
+        fontFamily: " OverpassRegular",
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: userIsLoggedIn != null ?  userIsLoggedIn ? ChatRoom() : Authenticate()
